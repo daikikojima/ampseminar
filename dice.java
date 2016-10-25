@@ -15,7 +15,7 @@ class dice{
 				count++;
 			}
 		}
-		System.out.println("f(k) =" + count);
+		System.out.println("f(k) =" + count/(double)n);
 
 	}
 
