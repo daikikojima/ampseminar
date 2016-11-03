@@ -1,9 +1,7 @@
 class dice{
 	public static void main(String args[]){
 		double r = 0.5;//サイコロの確率
-		for(int i = 1; i <=10; i++){
-			Events(i * 10,r);
-		}
+		Events(100,r);
 	}
 	public static void Events(int n, double r){
 		System.out.println("k = " + n);
@@ -14,9 +12,12 @@ class dice{
 			if(p >= r){
 				count++;
 			}
+			if((i+1) % 10 == 0){
+				System.out.println("n = " + (i + 1) + " | count : " + count);
+				System.out.println("f(k) = " + count/(double)n);		
+			}
 		}
-		System.out.println("f(k) =" + count/(double)n);
-
+		
 	}
 
 }
